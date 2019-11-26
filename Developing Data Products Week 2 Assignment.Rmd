@@ -1,0 +1,23 @@
+---
+title: "Developing Data Products Week 2 Assignment"
+author: "Chi Zhang"
+date: "11/26/2019"
+output: html_document
+---
+
+## Introduction
+
+The goal of this assignment is to use R Markdown to create a web page. The web page should contain a map that is created using Leaflet. 
+
+## Map Creation
+Let's creat a map to show the headquarter of Coursera in Montain View, CA.
+
+Based on the data from Google Map, the lattitude and longtitue of the Coursera headquarter are 37.787 and -122.061 accordingly.
+
+```{r}
+library(leaflet)
+the_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=37.387, lng=-122.061, popup="Coursera")
+the_map
+```
